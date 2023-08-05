@@ -116,35 +116,13 @@ try {
                 minute_space: 0,
                 minute_array: TIME_FONT,
                 minute_align: hmUI.align.LEFT,
-                show_level: hmUI.show_level.ONLY_NORMAL
+                show_level: hmUI.show_level.ONLY_NORMAL | hmUI.show_level.ONLY_AOD
             })
             hmUI.createWidget(hmUI.widget.IMG, { // рисуем точки для времени
                 x: 78,
                 y: 165,
                 src: "time/dots.png",
-                show_level: hmUI.show_level.ONLY_NORMAL
-            })
-            hmUI.createWidget(hmUI.widget.IMG_TIME, { // тоже самое только для AOD
-                hour_zero: true,
-                hour_startX: 12,
-                hour_startY: 162,
-                hour_space: 0,
-                hour_array: TIME_FONT,
-                hour_align: hmUI.align.CENTER,
-
-                minute_zero: true,
-                minute_startX: 112,
-                minute_startY: 162,
-                minute_space: 0,
-                minute_array: TIME_FONT,
-                minute_align: hmUI.align.LEFT,
-                show_level: hmUI.show_level.ONLY_AOD
-            })
-            hmUI.createWidget(hmUI.widget.IMG, {
-                x: 80,
-                y: 167,
-                src: "time/dots.png",
-                show_level: hmUI.show_level.ONLY_AOD
+                show_level: hmUI.show_level.ONLY_NORMAL | hmUI.show_level.ONLY_AOD
             })
 
             drawLine(225)
@@ -188,6 +166,7 @@ try {
                 anim_status: hmUI.anim_status.START,
                 x: 0,
                 y: 310,
+                show_level: hmUI.show_level.ONLY_NORMAL
             })
 
             hmUI.createWidget(hmUI.widget.IMG_CLICK, { // открывать окно измерения пульса при нажатии
